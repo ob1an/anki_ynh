@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+for u in $(ynh_user_list)
+do
+    export SYNC_USER1=$u:__COMMON_PASSWORD__
+
+done
+
+export SYNC_PORT=__PORT__
+export SYNC_HOST=127.0.0.1
+export SYNC_BASE=__DATA_DIR__
+
+
+__INSTALL_DIR__/bin/python -m anki.syncserver

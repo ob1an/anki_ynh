@@ -88,8 +88,6 @@ ynh_script_progression --message="Upgrading system configurations related to $ap
 
 # This should be a literal copypaste of what happened in the install's "System configuration" section
 
-ynh_add_fpm_config
-
 ynh_add_nginx_config
 
 ynh_add_systemd_config
